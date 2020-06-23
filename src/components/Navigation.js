@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function Navigation () {
     return (
         <div>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Title</Navbar.Brand>
+                <Link to="/"><Navbar.Brand>Title</Navbar.Brand></Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
@@ -19,7 +20,7 @@ function Navigation () {
                     </NavDropdown>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#register">Register</Nav.Link>
+                    <Nav.Link as={Link} to="/register">Register</Nav.Link>
                     <Nav.Link href="#login">Login</Nav.Link>
                     <Nav.Link href="#logout">Logout</Nav.Link>
                 </Nav>
